@@ -4,11 +4,8 @@ def oxford_comma(array)
     array.join 
   elsif array.count == 2
       array.join(" and ")
-  else 
-    array[-1] = "and " + array[-1]
+  elsif array.count > 2
+    array[-1] = "and #{array[-1]}"
     array.join(", ")
-  end
 end
-
-# Brad and Mary need to ...
-# Brad, Mary and Kim need...
+end
